@@ -54,6 +54,11 @@ limitations under the License.
 To use in Observable,
 
 ```javascript
+typedarray = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js' )
+```
+The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-typed/tags). For example,
+
+```javascript
 typedarray = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.1.0-umd/browser.js' )
 ```
 
@@ -66,7 +71,7 @@ var typedarray = require( 'path/to/vendor/umd/array-typed/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -206,7 +211,7 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 <html lang="en">
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.1.0-umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
