@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@deno/mod.js';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.2.1-deno/mod.js';
 ```
 
 #### typedarray( \[dtype] )
@@ -179,7 +179,7 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@deno/mod.js';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.2.1-deno/mod.js';
 
 var arr = typedarray( 100, 'float64' );
 
