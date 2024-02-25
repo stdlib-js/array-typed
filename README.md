@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@esm/index.mjs';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.2.1-esm/index.mjs';
 ```
 
 #### typedarray( \[dtype] )
@@ -184,7 +184,7 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 <script type="module">
 
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@esm/index.mjs';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.2.1-esm/index.mjs';
 
 var arr = typedarray( 100, 'float64' );
 
