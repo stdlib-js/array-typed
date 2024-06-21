@@ -2,7 +2,7 @@
 
 @license Apache-2.0
 
-Copyright (c) 2018 The Stdlib Authors.
+Copyright (c) 2024 The Stdlib Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ limitations under the License.
   <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
 </details>
 
-# Typed Arrays
+# typedarray
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
@@ -45,64 +45,44 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/array-typed
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-typedarray = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var typedarray = require( 'path/to/vendor/umd/array-typed/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.typedarray;
-})();
-</script>
+var typedarray = require( '@stdlib/array-typed' );
 ```
 
 #### typedarray( \[dtype] )
 
-Creates a [typed array][mdn-typed-array] having a specified data type `dtype`.
+Creates a [typed array][mdn-typed-array] having a specified [data type][@stdlib/array/typed-dtypes].
 
 ```javascript
 var arr = typedarray();
 // returns <Float64Array>
 ```
 
-The function recognizes the following data types:
-
--   `float64`: double-precision floating-point numbers (IEEE 754)
--   `float32`: single-precision floating-point numbers (IEEE 754)
--   `complex128`: double-precision complex floating-point numbers
--   `complex64`: single-precision complex floating-point numbers
--   `int32`: 32-bit two's complement signed integers
--   `uint32`: 32-bit unsigned integers
--   `int16`: 16-bit two's complement signed integers
--   `uint16`: 16-bit unsigned integers
--   `int8`: 8-bit two's complement signed integers
--   `uint8`: 8-bit unsigned integers
--   `uint8c`: 8-bit unsigned integers clamped to `0-255`
-
-By default, the output [typed array][mdn-typed-array] data type is `float64`. To specify an alternative data type, provide a `dtype` argument.
+By default, the output [typed array][mdn-typed-array] data type is `float64`. To specify an alternative data type, provide a [`dtype`][@stdlib/array/typed-dtypes] argument.
 
 ```javascript
 var arr = typedarray( 'int32' );
@@ -148,7 +128,7 @@ var arr2 = typedarray( [ 0.5, 0.5, 0.5 ], 'float32' );
 // returns <Float32Array>[ 0.5, 0.5, 0.5 ]
 ```
 
-If `dtype` is complex number data type and an array-like object contains interleaved real and imaginary components, the array-like object must have a length which is a multiple of two.
+If [`dtype`][@stdlib/array/typed-dtypes] is complex number data type and an array-like object contains interleaved real and imaginary components, the array-like object must have a length which is a multiple of two.
 
 #### typedarray( buffer\[, byteOffset\[, length]]\[, dtype] )
 
@@ -187,7 +167,7 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 
 ## Notes
 
--   When providing a complex number array, if `dtype` is unspecified or the specified data type is not a complex number data type, the returned array contains interleaved real and imaginary components.
+-   When providing a complex number array, if [`dtype`][@stdlib/array/typed-dtypes] is unspecified or the specified data type is not a complex number data type, the returned array contains interleaved real and imaginary components.
 
 </section>
 
@@ -201,14 +181,9 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var typedarray = require( '@stdlib/array-typed' );
 
 var arr = typedarray( 100, 'float64' );
 
@@ -217,11 +192,6 @@ for ( i = 0; i < arr.length; i++ ) {
     arr[ i ] = randu() * 100.0;
 }
 console.log( arr );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -336,29 +306,31 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-arraybuffer]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
+[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes
+
 <!-- <related-links> -->
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/umd
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/umd
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/umd
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32/tree/umd
+[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/umd
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
 
-[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16/tree/umd
+[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16
 
-[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16/tree/umd
+[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16
 
-[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8/tree/umd
+[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8
 
-[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8/tree/umd
+[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8
 
-[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c/tree/umd
+[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c
 
 <!-- </related-links> -->
 
