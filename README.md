@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-typed
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var typedarray = require( '@stdlib/array-typed' );
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@esm/index.mjs';
 ```
 
 #### typedarray( \[dtype] )
@@ -135,7 +117,7 @@ If [`dtype`][@stdlib/array/typed-dtypes] is complex number data type and an arra
 Returns a [typed array][mdn-typed-array] view of an [`ArrayBuffer`][mdn-arraybuffer].
 
 ```javascript
-var ArrayBuffer = require( '@stdlib/array-buffer' );
+import ArrayBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@esm/index.mjs';
 var buf = new ArrayBuffer( 32 );
 
 var arr1 = typedarray( buf );
@@ -181,9 +163,14 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var randu = require( '@stdlib/random-base-randu' );
-var typedarray = require( '@stdlib/array-typed' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@esm/index.mjs';
 
 var arr = typedarray( 100, 'float64' );
 
@@ -192,6 +179,10 @@ for ( i = 0; i < arr.length; i++ ) {
     arr[ i ] = randu() * 100.0;
 }
 console.log( arr );
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -239,7 +230,7 @@ console.log( arr );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -306,31 +297,31 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-arraybuffer]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
-[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes
+[@stdlib/array/typed-dtypes]: https://github.com/stdlib-js/array-typed-dtypes/tree/esm
 
 <!-- <related-links> -->
 
-[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128
+[@stdlib/array/complex128]: https://github.com/stdlib-js/array-complex128/tree/esm
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/esm
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
 
-[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32
+[@stdlib/array/float32]: https://github.com/stdlib-js/array-float32/tree/esm
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
+[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32/tree/esm
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/esm
 
-[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16
+[@stdlib/array/int16]: https://github.com/stdlib-js/array-int16/tree/esm
 
-[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16
+[@stdlib/array/uint16]: https://github.com/stdlib-js/array-uint16/tree/esm
 
-[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8
+[@stdlib/array/int8]: https://github.com/stdlib-js/array-int8/tree/esm
 
-[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8
+[@stdlib/array/uint8]: https://github.com/stdlib-js/array-uint8/tree/esm
 
-[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c
+[@stdlib/array/uint8c]: https://github.com/stdlib-js/array-uint8c/tree/esm
 
 <!-- </related-links> -->
 
