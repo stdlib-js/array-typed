@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-05-15)
+## Unreleased (2025-05-16)
 
 <section class="bug-fixes">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`efe6e5d`](https://github.com/stdlib-js/stdlib/commit/efe6e5d6a5b1cac0d56c3c96170f45192959299e) - **docs:** add comment _(by Athan Reines)_
 -   [`c54d1e0`](https://github.com/stdlib-js/stdlib/commit/c54d1e095143ad68529927fe76e8ddc435592a19) - **fix:** revert iterator type change _(by Athan Reines)_
 -   [`b6df817`](https://github.com/stdlib-js/stdlib/commit/b6df81722b97af36092f9c6850f33e6d4795aaa4) - **docs:** fix types _(by Athan Reines)_
 
