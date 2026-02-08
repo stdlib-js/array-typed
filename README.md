@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/array-typed/tags). For example,
+
+```javascript
 import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.3.2-deno/mod.js';
 ```
 
@@ -165,7 +170,7 @@ var arr6 = typedarray( buf, 10, 4, 'int16' );
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@v0.3.2-deno/mod.js';
+import typedarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-typed@deno/mod.js';
 
 var arr = typedarray( 100, 'float64' );
 
