@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-24)
+## Unreleased (2026-11-06)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`8f624de`](https://github.com/stdlib-js/stdlib/commit/8f624de7eaf721da6bdb42adc299c4876a856c0f) - **style:** add missing whitespace [(#16522)](https://github.com/stdlib-js/stdlib/pull/16522) _(by Philipp Burckhardt)_
 -   [`0f81ad2`](https://github.com/stdlib-js/stdlib/commit/0f81ad2fd3441f93d03b305c65fe500155bda08c) - **bench:** fix description and fix JSDoc annotation [(#13090)](https://github.com/stdlib-js/stdlib/pull/13090) _(by Philipp Burckhardt)_
 -   [`4467556`](https://github.com/stdlib-js/stdlib/commit/44675569bea3c9d21c1f9afc835f7efb4344a22c) - **feat:** add float16 dtype support to `array/typed` [(#13053)](https://github.com/stdlib-js/stdlib/pull/13053) _(by Gururaj Gurram, Athan Reines)_
 
